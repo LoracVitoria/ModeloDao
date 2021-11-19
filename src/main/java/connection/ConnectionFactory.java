@@ -21,9 +21,9 @@ public class ConnectionFactory {
 		
 			try {
 				
-				Properties props = loadProperties();
-				String url = props.getProperty("dburl");
-				connection = DriverManager.getConnection(url, props);
+//				Properties props = loadProperties();
+//				String url = props.getProperty("dburl");
+				//connection = DriverManager.getConnection(url, props);
 			
 				connection = DriverManager.getConnection("jdbc:mysql://localhost/ifc_store", "root", "bancodedados");
 			
