@@ -15,7 +15,9 @@ public class TesteConexaoDao {
 		SellerDao dao = DaoFactory.createSellerDao();
 		
 		Seller seller = dao.findById(2);
-		
+
+
+
 		System.out.println(seller);
 		
 		
