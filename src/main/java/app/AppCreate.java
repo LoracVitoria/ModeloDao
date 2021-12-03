@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("")
+@WebServlet(urlPatterns = {"","/create"})
 public class AppCreate extends HttpServlet {
 
 	@Override
@@ -40,6 +40,8 @@ public class AppCreate extends HttpServlet {
 					System.out.println("id: " + id + " nome:" + name);
 				}
 
+
+				resp.sendRedirect("/AppModelDao/create");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
