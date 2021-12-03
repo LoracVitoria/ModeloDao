@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="ModeloDao:war">
+  <artifact type="war" name="AppModelDao:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
@@ -10,7 +10,7 @@
       </options>
     </properties>
     <root id="archive" name="ModeloDao-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="ModeloDao:war exploded" />
+      <element id="artifact" artifact-name="AppModelDao:war exploded" />
     </root>
   </artifact>
 </component>
