@@ -27,7 +27,7 @@ public class AppDelete extends HttpServlet {
 			st.setInt(1, 1);
 			
 			st.executeUpdate();
-		
+			System.out.println("Teste Delete");
 		
 		} catch (SQLException e) {
 			

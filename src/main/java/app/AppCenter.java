@@ -1,21 +1,34 @@
 package app;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import connection.ConnectionFactory;
+import dao.DepartmentDaoJDBC;
+import models.Department;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.util.List;
 
-@WebServlet(urlPatterns = {"","/create"})
+@WebServlet(urlPatterns = {"","/center"})
 public class AppCenter extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+
+
+        DepartmentDaoJDBC dao = new DepartmentDaoJDBC();
+        List<Department> deps = dao.findAll();
+
+        req.setAttribute("deps", deps);
+
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("HomePageServlet.jsp") ;
+        dispatcher.forward(req, resp);
+
+
+
     }
 }

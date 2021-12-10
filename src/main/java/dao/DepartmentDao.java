@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import models.Department;
@@ -14,6 +15,6 @@ public interface DepartmentDao {
 	
 	public Department findById(Integer id);
 	
-	public List<Department> findAll();
+	public List<Department> findAll() throws SQLException;
 	
 }

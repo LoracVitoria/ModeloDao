@@ -1,4 +1,5 @@
-<%--
+<%@ page import="models.Department" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: superior
   Date: 02/12/2021
@@ -12,42 +13,18 @@
     <link rel="stylesheet" type="text/css" href="EstilosaDemais.css" />
 </head>
 <body>
-	<div class="all">
-		<h1 class="title">CREATE SERVLET</h1>
-		<div class="center-fixed">
-			<form id="frmCadastro">
-				<label for="txtNome">Nome</label><br>
-				<input type="text" id="txtNome" placeholder="Nome"><br>
 
-				<label for="dtpDataNascimento">Data de Nascimento</label><br>
-				<input type="date" id="dtpDataNascimento" value="1990-08-29" required>
+<h1>Cadastro de Departamentosl!</h1>
+<p>Insira abaixo os dados: </p>
 
-				<fieldset>
-					<legend>Sexo</legend>
-					<input type="radio" name="genero" value="male" id="rdoMasculino" checked>
-					<label for="rdoMasculino">Masculino</label><br>
+<form action="savedepartment" method="post">
+    <input type="text" name="field_name_department">
+    <input type="submit" value="Salvar">
+</form>
 
-					<input type="radio" name="genero" value="female" id="rdoFeminino">
-					<label for="rdoFeminino">Feminino</label>
-				</fieldset>
+<a href="">salvar</a>
+<br/>
 
-				<input type="submit" name="" id="btnCadastrarSalvar" value="Cadastrar">
-			</form>
-		</div>
-		<table>
-			<caption><h2>Tabela</h2></caption>
-			<thead>
-				<tr>
-					<th>Id</th>
-					<th>Nome</th>
-					<th>Nascimento</th>
-					<th>Sexo</th>
-					<th>Ultima Atualização</th>
-				</tr>
-			</thead>
-			<tbody id="tbodyResultados"></tbody>
-<tfoot></tfoot>
-</table>
-</div>
+
 </body>
 </html>
