@@ -9,12 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Create Servlet</title>
     <link rel="stylesheet" type="text/css" href="EstilosaDemais.css" />
+
+    <title>Create Servlet</title>
 </head>
 <body>
 
-<h1>Cadastro de Departamentosl!</h1>
+<h1>Cadastro de Departamentos!</h1>
 <p>Insira abaixo os dados: </p>
 
 <form action="savedepartment" method="post">
@@ -22,9 +23,9 @@
     <input type="submit" value="Salvar">
 </form>
 
-<a href="">salvar</a>
 <br/>
 
+<button><a href="center">Página inicial</a></button>
 
 </body>
 </html>

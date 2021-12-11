@@ -1,8 +1,8 @@
 package dao;
 
 import connection.ConnectionFactory;
+import exceptions.DatabaseException;
 import models.Department;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +48,34 @@ public class DepartmentDaoJDBC implements DepartmentDao{
     @Override
     public void update(Department department) {
 
+        Connection conn = ConnectionFactory.getConnection();
+
+        try {
+
+            conn.setAutoCommit(false);
+
+            String name = department.getName();
+            Integer id = department.getId();
+            PreparedStatement st = conn.prepareStatement(""
+                    + "UPDATE department SET Name + ? WHERE Id = ?");
+
+            st.setString(id, name);
+
+            st.executeUpdate();
+            conn.commit();
+
+
+        } catch (SQLException e) {
+
+            try {
+                conn.rollback();
+                throw new DatabaseException("problema de transacao");
+
+            } catch (SQLException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+        }
     }
 
     @Override

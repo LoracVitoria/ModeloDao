@@ -7,10 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
+    <link rel="stylesheet" type="text/css" href="EstilosaDemais.css" />
+
     <title>Find Servlet</title>
 </head>
 <body>
 
+
+<button><a href="center">Página inicial</a></button>
 </body>
 </html>

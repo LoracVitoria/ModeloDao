@@ -9,7 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Página Inicial</title>
+    <link rel="stylesheet" type="text/css" href="EstilosaDemais.css" />
+
+    <title>Home Page</title>
 </head>
 <body>
 
@@ -20,9 +22,11 @@
 <h1>Página Inicial!</h1>
 <p>Seja bem-vindo a página inicial!</p>
 
-<a href=create>cadastrar</a>
+
 <br/>
 <table>
+    <th>Id</th>
+    <th>Nome</th>
     <% for (Department d: departments){ %>
     <tr>
         <td><%= d.getId()%></td>
@@ -30,7 +34,19 @@
     </tr>
   <%  } %>
 </table>
+<br/>
+<br/>
+<br/>
 
+<button><a href="create">Cadastrar</a></button>
+
+<button><a href="update">Atualizar</a></button>
+
+<button><a href="find">Procurar</a></button>
+
+<button><a href="delete">Excluir</a></button>
+
+<br/>
 
 </body>
 </html>

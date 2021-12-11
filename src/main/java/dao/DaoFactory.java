@@ -1,6 +1,7 @@
 package dao;
 
 import connection.ConnectionFactory;
+import models.Department;
 
 public class DaoFactory {
 	

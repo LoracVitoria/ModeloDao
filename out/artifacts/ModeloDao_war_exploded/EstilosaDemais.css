@@ -1,21 +1,37 @@
-.all{
-    /*background-color: khaki;*/
-display: table;
-margin: 0 auto;
-padding: 10px;
+a{
+    color: darkorange;
+    /*width: 50px;*/
+    /*height: 50px;*/
+    margin-top: -20px;
+
+    padding: 20px 25px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.title {
-    /*background-color: gold;*/
+body{
+    background-color: white;
     text-align: center;
 }
 
-.center-fixed{
-    /*background-color: sandybrown ;*/
-    width: 500px;
-    height: 350px;
-    margin: 0 auto;
+h1{
+    text-align: center;
+    color: brown;
+
 }
+p{
+    text-align: center;
+    color: saddlebrown;
+}
+
+
+
+title {
+    /*background-color: gold;*/
+    text-align: center;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
 
 form{
     /*background-color: lightcyan;*/
@@ -39,9 +55,6 @@ form input{
     margin-bottom: 12px;
 }
 
-form input:hover{
-
-}
 
 form input:focus{
     border: 3px solid #333;
@@ -76,21 +89,33 @@ form fieldset label{/*Radio Name*/
     font: 16px arial, sans-serif;
 }
 
-form input[type=submit]{
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 20px;
-    padding: 12px 32px;	/*top bottom - left right*/
+button{
+    width: auto;
+    height: 30px;
+    padding: 8px 16px;
     transition: 0.1s;
     border: 0 none;
     border-radius: 20px;
     background-color: black;
-    color: white;
     cursor: pointer;
 }
+input[type=submit]{
+    width: 50%;
+    margin-top: 20px;
+    background-color: black;
+    color: orange;
+    cursor: pointer;
+    padding: 12px 32px;
+    transition: all 0.1s ease 0s;
+    border-width: 0px;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 20px;
+}
 
-form input[type=submit]:hover{
-    background-color: lightgray;
+input[type=submit]:hover{
+    background-color: gray;
     color: black;
 }
 
@@ -99,14 +124,14 @@ form input[type=submit]:active{
 }
 
 table{
-    width: auto;
+    width: 30%;
     margin: 0 auto;
-    border-collapse: collapse;
 }
-table caption{
-    font: 15px sans-serif;
-    text-shadow: 2px 2px lightgray;
-
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+td{
+    text-align: center;
 }
 /*Linha do titulo*/
 table thead tr{
@@ -119,23 +144,11 @@ table thead tr th {
     border-bottom:2px solid black;
     border-right: 1px solid black;
 }
+
 /*Ao passar o mouse sobre a Linha*/
 table tbody tr:hover {
     background-color: lightgray;
 }
 /*celulas do conteudo*/
-table tbody td{
-    border: 1px dotted gray;
-    padding: 3px 6px;
-}
-/*Botoes da tabela Excluir/Alterar*/
-table button{
-    border-radius: 10px;
-    background-color: darkslategray;
-    color: lightblue;
-    padding: 3px 15px;/*definindo tamanhos*/
-}
-/*classes utilizada no javascript*/
-.estadoAlteracao{
-    background-color: orange;
-}
+
+

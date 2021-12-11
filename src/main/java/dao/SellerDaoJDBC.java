@@ -163,15 +163,15 @@ public class SellerDaoJDBC implements SellerDao {
 		
 		return seller;
 	}
-	
+
 	private Department createDepartment(ResultSet result) throws SQLException {
-		
+
 		Department department= new Department();
-		
+
 		department.setId(result.getInt("DepartmentId"));
-		
+
 		department.setName(result.getString("DepName"));
-		
+
 		return department;
 	}
 

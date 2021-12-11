@@ -1,3 +1,5 @@
+<%@ page import="models.Department" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: superior
@@ -8,9 +10,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="EstilosaDemais.css" />
+
     <title>Update Servlet</title>
 </head>
-<body>
+<h1>Insira os dados!</h1>
+<form action="updatedepartment" method="get">
+    <p>Id:</p>
+    <input type="text" name="field_id_department">
+    <br/>
+    <p>Nome:</p>
+    <input type="text" name="field_name_department">
+    <br/>
+    <input type="submit" value="Salvar">
+</form>
+<br/>
+<br/>
+<br/>
 
+<button><a href="center">Página inicial</a></button>
 </body>
 </html>
